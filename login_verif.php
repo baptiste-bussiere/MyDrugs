@@ -10,15 +10,15 @@
     if ($lignes_resultat>0) {
         $ligne=$resultat->fetch(PDO::FETCH_ASSOC);
         if(password_verify($mdp, $ligne['users_pass'])){
-            $_SESSION['name_users'] = $ligne['users_name'];
-            $_SESSION['id_users'] = $ligne['users_id'];
-            header('Location:connexion.php')
-        } else{
-            $_SESSION['erreur'] ='<p class="erreur">Le mot de passe est incorrecte.</p>';
-            header('Location:connexion.php')
+            $_SESSION['user_name'] = $ligne['users_name'];
+            $_SESSION['user_id'] = $ligne['users_id'];
+            header('Location:index.php');
+        }else {
+            $_SESSION['erreur'] ='Le mot de passe est incorrecte.';
+            header('Location:connexion.php');
         }
     } else{
-        $_SESSION['erreur']='<p class="erreur">Utilisateur inconnu.</p>';
+        $_SESSION['erreur']='Utilisateur inconnu.';
         header('Location: connexion.php');
     }
     deconnexionBDD();

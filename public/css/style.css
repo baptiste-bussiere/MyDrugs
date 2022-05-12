@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    gap: 5em;
+}
+
+a {
+    padding: 1em;
+    margin: 1em;
+    background-color: #000;
+    color: #fff;
+    border: solid #000 2px;
+    transition: 300ms;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
