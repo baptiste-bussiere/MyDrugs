@@ -5,15 +5,14 @@
 }
 
 body {
-    background-color: black;
     font-style: normal;
-    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 header {
     display: flex;
+    background-color: rgb(0, 0, 0);
     section {
         display: flex;
         align-items: center;
@@ -46,6 +45,7 @@ header {
         }
         h1 {
             font-size: 3em;
+            color: rgb(234, 234, 234);
             margin: 0 2em;
             font-family: hanson, sans-serif;
         }
@@ -58,9 +58,36 @@ header {
 }
 
 main {
+    display: flex;
+    flex-direction: row;
     section {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        article {
+            &:nth-child(1) {
+                font-size: 2em;
+            }
+            margin: 1rem;
+            color: rgb(234,
+            234,
+            234);
+            background-color: #000;
+            border-radius: 1rem;
+            padding: 1em;
+            justify-content: stretch;
+        }
+        display: flex;
         h1 {
             font-family: hanson, sans-serif;
         }
+    }
+    article {
+        margin: 1em;
+        color: rgb(234, 234, 234);
+        background-color: #000;
+        border-radius: 1em;
+        padding: 1em;
+        font-family: hanson, sans-serif;
     }
 }
