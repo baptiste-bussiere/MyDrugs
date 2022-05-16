@@ -1,9 +1,11 @@
 @import url("https://use.typekit.net/wxe6mux.css");
+@font-face {
+    font-family: "hanson";
+    src: url("/public/font/hanson.ttf") format("woff2");
+}
+
 body {
     background-color: black;
-    font-family: degular, sans-serif;
-    font-weight: 400;
-    font-size: 2em;
     font-style: normal;
     color: #fff;
     margin: 0;
@@ -13,10 +15,52 @@ body {
 header {
     display: flex;
     section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         width: 50%;
+        justify-content: center;
         height: 100vh;
+        nav {
+            ul {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    margin: 1em;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-family: termina, sans-serif;
+                        font-weight: 100;
+                        &:hover span {
+                            visibility: visible;
+                        }
+                        span {
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0 2em;
+            font-family: hanson, sans-serif;
+        }
         &:nth-last-child(1) {
-            background-color: aqua;
+            background-image: url(/public/img/paint.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+main {
+    section {
+        h1 {
+            font-family: hanson, sans-serif;
         }
     }
 }
