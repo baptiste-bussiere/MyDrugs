@@ -6,27 +6,17 @@ body {
     font-size: 2em;
     font-style: normal;
     color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    display: flex;
-    background-color: aqua;
     section {
-        display: flex;
-        width: 100%;
-        background-color: blue;
-        flex-wrap: wrap;
-        article {
-            background-color: red;
-            width: 10%;
-            margin: 1em;
+        width: 50%;
+        height: 100vh;
+        &:nth-last-child(1) {
+            background-color: aqua;
         }
     }
 }
